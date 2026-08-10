@@ -1,2 +1,2 @@
-# Estrutua-de-Dados-II
+# Estrutura-de-Dados-II
 university
