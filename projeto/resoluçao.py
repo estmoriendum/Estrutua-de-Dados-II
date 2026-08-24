@@ -61,7 +61,7 @@ soma_diagonal = 0
 for i in range(3):
     soma_diagonal = soma_diagonal + matriz[i][i]
 
-# Encontrando o maior elemento
+#procura o maior
 maior = matriz[0][0]
 
 for i in range(3):
