@@ -1,3 +1,10 @@
+#!1 possui o mesmo resultado
+
+
+
+
+
+#desafio
 fila = []
 
 def adicionar_paciente():
