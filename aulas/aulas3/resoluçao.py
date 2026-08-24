@@ -1,5 +1,5 @@
-#!1 possui o mesmo resultado
-
+#!1 10,20,30,40
+#!2 possui o mesmo resultado
 
 
 
