@@ -1,6 +1,6 @@
 #!1 10,20,30,40
-#!2 possui o mesmo resultado
-
+#!2 possui o mesmo resultado, listas são objetos mutáveis e variáveis não guardam o valor direto do objeto, mas sim uma referência (ponteiro) para a memória onde o objeto reside.
+#!3 cria uma nova lista em um novo local da memoria, os objetos a e b retornariam numeros diferentes pq agora ocupam um novo local na memoria
 
 
 
