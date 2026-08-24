@@ -103,36 +103,26 @@ print("Ano:", livro["ano"])
 print("Preço:", livro["preco"])
 print("Categoria:", livro["categoria"])
 
-atividade 4
-
 -----------------------------------------------------------------------------------------------------------------------
+
+atividade 4
 
 from dataclasses import dataclass
 
 @dataclass
 class Aluno:
     nome: str
-    matricula: int
+    matricula: str
     nota1: float
     nota2: float
 
-    def media(self):
-        return (self.nota1 + self.nota2) / 2
+aluno1 = Aluno("Maria", "202601", 7.5, 8.5)
 
+#calcula
+media = (aluno1.nota1 + aluno1.nota2) / 2
 
-nome = input("Digite o nome: ")
-matricula = int(input("Digite a matrícula: "))
-nota1 = float(input("Digite a primeira nota: "))
-nota2 = float(input("Digite a segunda nota: "))
-
-aluno = Aluno(nome, matricula, nota1, nota2)
-
-print("\nNome:", aluno.nome)
-print("Matrícula:", aluno.matricula)
-print("Nota 1:", aluno.nota1)
-print("Nota 2:", aluno.nota2)
-print("Média:", aluno.media())
-
+print(f"Aluno: {aluno1.nome}")
+print(f"Média: {media}")
 
 -----------------------------------------------------------------------------------------------------------------------
 
@@ -143,52 +133,46 @@ from dataclasses import dataclass
 @dataclass
 class Aluno:
     nome: str
-    matricula: int
+    matricula: str
     nota1: float
     nota2: float
 
-    def media(self):
-        return (self.nota1 + self.nota2) / 2
 
-alunos = []
+alunos = [
+    Aluno("Ana", "001", 8.0, 9.0),
+    Aluno("Bruno", "002", 6.0, 7.0),
+    Aluno("Carlos", "003", 9.5, 8.5),
+    Aluno("Daniela", "004", 5.0, 6.0),
+    Aluno("Eduardo", "005", 7.0, 7.5)
+]
 
-#cadastrar 
-for i in range(5):
-    print("\nCadastro do aluno", i + 1)
-
-    nome = input("Digite o nome: ")
-    matricula = int(input("Digite a matrícula: "))
-    nota1 = float(input("Digite a primeira nota: "))
-    nota2 = float(input("Digite a segunda nota: "))
-
-    aluno = Aluno(nome, matricula, nota1, nota2)
-
-    alunos.append(aluno)
-
-#media
-print("\nMédia dos alunos:")
-
+#cada aluno
 for aluno in alunos:
-    print(aluno.nome, "- Média:", aluno.media())
+    media = (aluno.nota1 + aluno.nota2) / 2
+    print(f"{aluno.nome}: média = {media:.1f}")
 
-#aprovados
+#aprovado
 print("\nAlunos aprovados:")
 
 for aluno in alunos:
-    if aluno.media() >= 7:
-        print(aluno.nome, "- Média:", aluno.media())
+    media = (aluno.nota1 + aluno.nota2) / 2
 
-#maior
-maior_media = alunos[0]
+    if media >= 7.0:
+        print(f"{aluno.nome} - média: {media:.1f}")
+
+#maior media
+maior_aluno = alunos[0]
+maior_media = (maior_aluno.nota1 + maior_aluno.nota2) / 2
 
 for aluno in alunos:
-    if aluno.media() > maior_media.media():
-        maior_media = aluno
+    media = (aluno.nota1 + aluno.nota2) / 2
 
+    if media > maior_media:
+        maior_aluno = aluno
+        maior_media = media
 
 print("\nAluno com maior média:")
-print("Nome:", maior_media.nome)
-print("Média:", maior_media.media())
+print(f"{maior_aluno.nome} - média: {maior_media:.1f}")
 
 
 -----------------------------------------------------------------------------------------------------------------------
