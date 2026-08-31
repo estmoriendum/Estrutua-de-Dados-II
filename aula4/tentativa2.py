@@ -7,7 +7,7 @@ class Fila:
     
     def imprimir(self):
         if len(self.fila) > 0:
-            documento = self.fila.pop()
+            documento = self.fila.pop(0)
             print("imprimido",documento)
         else:
             return "nada"
