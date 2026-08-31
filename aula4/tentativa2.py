@@ -2,10 +2,10 @@ class Fila:
     def __init__(self):
     self.fila = []
 
-    def enrar(self, documneto):
+    def entrar(self, documneto):
         self.fila.append(documento)
     
-    def desfazer(self):
+    def imprimir(self):
         if len(self.fila) > 0:
             documento = self.fila.pop()
             print("imprimido",documento)
